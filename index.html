@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuskar Thapa | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#2563EB',
+                        dark: '#0F172A',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: #374151;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #6b7280;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-sans leading-relaxed">
+
+    <nav class="fixed w-full z-50 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm shadow-sm transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-900 dark:text-slate-100">Anuskar<span class="text-primary">.</span></a>
+            
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#about" class="text-slate-800 dark:text-slate-200 hover:text-primary transition">About</a>
+                <a href="#skills" class="text-slate-800 dark:text-slate-200 hover:text-primary transition">Skills</a>
+                <a href="#projects" class="text-slate-800 dark:text-slate-200 hover:text-primary transition">Projects</a>
+                <a href="#experience" class="text-slate-800 dark:text-slate-200 hover:text-primary transition">Experience</a>
+                <a href="#contact" class="px-5 py-2.5 bg-primary text-white rounded-lg hover:bg-blue-700 transition shadow-md shadow-blue-500/30">Contact Me</a>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="text-2xl text-slate-800 dark:text-slate-200 hover:text-primary dark:hover:text-blue-400 transition focus:outline-none">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-800 dark:text-slate-200 focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 border-t dark:border-slate-700 p-4 flex flex-col space-y-4 shadow-lg">
+            <a href="#about" class="block hover:text-primary text-slate-800 dark:text-slate-200">About</a>
+            <a href="#skills" class="block hover:text-primary text-slate-800 dark:text-slate-200">Skills</a>
+            <a href="#projects" class="block hover:text-primary text-slate-800 dark:text-slate-200">Projects</a>
+            <a href="#experience" class="block hover:text-primary text-slate-800 dark:text-slate-200">Experience</a>
+            <a href="#contact" class="block text-primary font-bold text-slate-800 dark:text-slate-200">Contact Me</a>
+        </div>
+    </nav>
+
+    <header id="hero" class="min-h-screen flex items-center justify-center pt-16 relative overflow-hidden">
+        <div class="absolute top-20 right-0 -z-10 w-96 h-96 bg-blue-200/50 dark:bg-blue-900/20 rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute bottom-20 left-0 -z-10 w-72 h-72 bg-purple-200/50 dark:bg-purple-900/20 rounded-full blur-3xl opacity-50"></div>
+
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <p class="text-primary font-semibold text-lg animate-pulse">Hello, I'm</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">Anuskar Thapa</h1>
+                <h2 class="text-2xl md:text-3xl text-slate-600 dark:text-slate-400 font-medium">Software Engineer</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-lg">
+                    A dedicated developer based in Sydney, specializing in full-stack web development with JavaScript and Tailwind CSS.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact" class="px-7 py-3 bg-primary text-white rounded-lg hover:bg-blue-700 transition shadow-lg shadow-blue-500/30 font-medium">
+                        Hire Me
+                    </a>
+                    <a href="resume.pdf" target="_blank" class="px-7 py-3 border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 rounded-lg hover:border-slate-800 dark:hover:border-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <div class="flex gap-6 pt-4 text-2xl text-slate-500 dark:text-slate-400">
+                    <a href="https://github.com/AnuskarAk" target="_blank" class="hover:text-slate-900 dark:hover:text-slate-100 transition" title="Add your specific profile link here"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/anuskar-thapa-120463275" target="_blank" class="hover:text-blue-600 transition"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="mailto:anuskar.thapa.tech@gmail.com" class="hover:text-red-500 transition"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="flex justify-center relative">
+                <div class="relative w-72 h-72 md:w-96 md:h-96">
+                    <div class="absolute inset-0 bg-blue-100 rounded-full rotate-6 transform transition hover:rotate-12"></div>
+                    <img src="./AK.png" alt="Anuskar Thapa" class="relative z-10 w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-white">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6 max-w-4xl text-center md:text-left">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100 relative inline-block">
+                    About Me
+                    <span class="absolute bottom-1 left-0 w-full h-3 bg-blue-100 dark:bg-blue-900/50 -z-10"></span>
+                </h2>
+                <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    I am a dedicated and reliable professional with a strong background in customer service and operations, currently pivoting into the tech industry. 
+                    I am pursuing a <strong class="text-slate-900 dark:text-slate-100">Bachelor of Information Technology</strong> at Victoria University.
+                </p>
+                <p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Fluent in English and passionate about problem-solving, I focus on delivering high-quality service and maintaining strict standards. 
+                    As a <strong class="text-slate-900 dark:text-slate-100">Junior Developer</strong>, I am gaining hands-on experience in modern software workflows, utilizing Git and Agile methodologies to build responsive web applications.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100">Technical Skills</h2>
+                <p class="text-slate-500 dark:text-slate-400 mt-2">My stack and tools</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 dark:border-slate-700">
+                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-lg flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-slate-100">Languages & Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> JavaScript (ES6+)</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> React.js</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> HTML5 & CSS3</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 dark:border-slate-700">
+                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 text-purple-600 dark:text-purple-400 rounded-lg flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-slate-100">Tools & Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> Git & GitHub</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> VS Code</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm hover:shadow-md transition border border-slate-100 dark:border-slate-700">
+                    <div class="w-12 h-12 bg-green-100 dark:bg-green-900/50 text-green-600 dark:text-green-400 rounded-lg flex items-center justify-center text-xl mb-6">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-slate-900 dark:text-slate-100">Soft Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> Collaboration</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> Problem Solving</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> Time Management</span>
+                        <span class="px-3 py-1 bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 rounded-full text-sm font-medium"> Active Listening</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">Experience</h2>
+            
+            <div class="space-y-12 border-l-2 border-slate-200 dark:border-slate-700 ml-3 md:ml-6 pl-8 md:pl-12 relative">
+                
+                <div class="relative">
+                    <span class="absolute -left-[43px] md:-left-[59px] top-0 w-6 h-6 bg-primary rounded-full border-4 border-white dark:border-slate-800 shadow-sm"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100"> Junior Developer Trainee</h3>
+                        <span class="text-sm text-blue-600 bg-blue-50 dark:bg-blue-900/50 px-3 py-1 rounded-full"> Month 2025 – Present</span>
+                    </div>
+                    <div class="text-slate-500 dark:text-slate-400 font-medium mb-4"> Dented Code Academy, Australia</div>
+                    <ul class="list-disc list-outside ml-4 text-slate-600 dark:text-slate-400 space-y-2 marker:text-primary">
+                        <li> Participating in an intensive developer training program focusing on full-stack web technologies.</li>
+                        <li> Developing and maintaining responsive web applications using React and Tailwind CSS.</li>
+                        <li> Collaborating with senior developers to troubleshoot code, fix bugs, and implement new features.</li>
+                        <li> Gaining hands-on experience in Git, version control, and Agile methodologies.</li>
+                    </ul>
+                </div>
+
+                <div class="relative">
+                    <span class="absolute -left-[43px] md:-left-[59px] top-0 w-6 h-6 bg-slate-300 dark:bg-slate-600 rounded-full border-4 border-white dark:border-slate-800 shadow-sm"></span>
+                    <div class="flex flex-col sm:flex-row sm:items-baseline justify-between mb-2">
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-slate-100"> Team Member (Part-time)</h3>
+                        <span class="text-sm text-slate-500 dark:text-slate-400 font-semibold bg-slate-100 dark:bg-slate-700 px-3 py-1 rounded-full"> Sep 2023 – Present</span>
+                    </div>
+                    <div class="text-slate-500 dark:text-slate-400 font-medium mb-4"> Woolworths, Australia</div>
+                    <ul class="list-disc list-outside ml-4 text-slate-600 dark:text-slate-400 space-y-2 marker:text-slate-400 dark:marker:text-slate-500">
+                        <li> Providing product recommendations and ensuring a professional customer experience.</li>
+                        <li> Handling inquiries, resolving complaints, and processing transactions accurately.</li>
+                        <li> Picking and packing online orders with great accuracy and monitoring stock levels.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-slate-50 dark:bg-slate-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100 text-center mb-12">Projects</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group">
+                    <div class="h-48 bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 opacity-90 group-hover:scale-105 transition duration-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-white text-4xl">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-slate-100">Capstone Project (Bachelor of IT)</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6 line-clamp-3">
+                            Designed and developed a fully functional software solution to solve a specific user problem. Managed the full Software Development Life Cycle (SDLC) from requirements to deployment.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs font-semibold px-2 py-1 bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded">Web Development</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded">SDLC</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-blue-600 transition flex items-center gap-2">
+                                <i class="fa-brands fa-github"></i> View Code
+                            </a>
+                            <a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-blue-600 transition flex items-center gap-2">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition group">
+                    <div class="h-48 bg-slate-200 dark:bg-slate-700 relative overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-900 opacity-90 group-hover:scale-105 transition duration-500"></div>
+                        <div class="absolute inset-0 flex items-center justify-center text-white text-4xl">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-slate-100">Personal Portfolio</h3>
+                        <p class="text-slate-600 dark:text-slate-400 mb-6">
+                            The website you are looking at right now. Built to showcase my skills and experience using modern web technologies.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs font-semibold px-2 py-1 bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded">HTML5</span>
+                            <span class="text-xs font-semibold px-2 py-1 bg-blue-50 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded">Tailwind CSS</span>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="#" class="text-sm font-semibold text-slate-900 dark:text-slate-100 hover:text-blue-600 transition flex items-center gap-2">
+                                <i class="fa-brands fa-github"></i> View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-12 text-center">Education</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+
+                <div class="p-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:border-blue-300 dark:hover:border-blue-500 transition bg-slate-50 dark:bg-slate-900">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-slate-100"> Master of Applied Information Technology</h3>
+                            <p class="text-slate-600 dark:text-slate-400"> Victoria University</p>
+                        </div>
+                        <div class="w-10 h-10 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center shadow-sm text-blue-600">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 font-medium"> Nov 2025 –  Present</p>
+                </div>
+                
+                <div class="p-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:border-blue-300 dark:hover:border-blue-500 transition bg-slate-50 dark:bg-slate-900">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-slate-100"> Bachelor of Information Technology</h3>
+                            <p class="text-slate-600 dark:text-slate-400"> Victoria University</p>
+                        </div>
+                        <div class="w-10 h-10 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center shadow-sm text-blue-600">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 font-medium"> Completed Sep 2025</p>
+                </div>
+
+                <div class="p-6 border border-slate-200 dark:border-slate-700 rounded-xl hover:border-blue-300 dark:hover:border-blue-500 transition bg-slate-50 dark:bg-slate-900">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-900 dark:text-slate-100"> Diploma of Information Technology</h3>
+                            <p class="text-slate-600 dark:text-slate-400"> Victoria University</p>
+                        </div>
+                        <div class="w-10 h-10 bg-white dark:bg-slate-700 rounded-full flex items-center justify-center shadow-sm text-blue-600">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-500 dark:text-slate-400 font-medium"> Completed Jun 2023</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h2 class="text-3xl font-bold mb-8">Let's Work Together</h2>
+            <p class="text-slate-300 text-lg mb-10">
+                I am currently looking for new opportunities as a Software Engineer. 
+                Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <a href="mailto:anuskar.thapa.tech@gmail.com" class="p-6 bg-slate-800 rounded-xl hover:bg-slate-700 transition flex flex-col items-center">
+                    <i class="fa-solid fa-envelope text-3xl text-blue-400 mb-4"></i>
+                    <span class="text-slate-300 text-sm">Email Me</span>
+                    <span class="font-semibold text-lg break-all"> anuskar.thapa.tech@gmail.com</span>
+                </a>
+                <div class="p-6 bg-slate-800 rounded-xl flex flex-col items-center">
+                    <i class="fa-solid fa-location-dot text-3xl text-blue-400 mb-4"></i>
+                    <span class="text-slate-300 text-sm">Location</span>
+                    <span class="font-semibold text-lg"> Sydney, Australia</span>
+                </div>
+            </div>
+
+            <div class="flex justify-center gap-8 text-3xl">
+                <a href="https://www.linkedin.com/in/anuskar-thapa-120463275" target="_blank" class="hover:text-blue-400 transition" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/AnuskarAK" target="_blank" class="hover:text-white transition text-slate-400" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 text-slate-500 py-8 text-center text-sm">
+        <p>&copy; 2024 Anuskar Thapa. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+
+        // Check for saved theme preference or default to light mode
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        } else {
+            themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            const isDark = html.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            themeToggle.innerHTML = isDark ? '<i class="fa-solid fa-sun"></i>' : '<i class="fa-solid fa-moon"></i>';
+        });
+    </script>
+</body>
+</html>
